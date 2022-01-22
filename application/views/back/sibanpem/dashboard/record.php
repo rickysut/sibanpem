@@ -1,49 +1,362 @@
+<style>
+.bg-1b {
+    background-color: #A2ABDC;
+}
+</style>
 <!-- Small boxes (Stat box) -->
 <div class="row">
-    <!-- Column -->
-    <div class="col-lg-6 col-md-6">
+    <div class="col-lg-12 col-md-12">
         <div class="card">
-            <div class="card-body">
-                <!-- Row -->
-                <div class="row">
-                    <div class="col-8">
-                        <h2>Rp. 274.873.768.257 <i class="ti-angle-up font-14 text-success"></i></h2>
-                        <h6>Volume Kontrak Bantuan Barang</h6>
+            <div class="card-header bg-success">
+                <div class="card-actions">
+                    <a class=" text-white" data-action="collapse" data-toggle="tooltip" title="sembunyikan"><i
+                            class="ti-minus"></i></a>
+                    <a class="btn-minimize text-white" data-action="expand" data-toggle="tooltip" title="layar penuh"><i
+                            class="mdi mdi-arrow-expand"></i></a>
+                    <a class="btn-close text-white" data-action="close" data-toggle="tooltip" title="tutup"><i
+                            class="ti-close"></i></a>
+                </div>
+                <h4 class="card-title m-b-0 text-white"><a class="btn-minimize text-white" data-toggle="tooltip"
+                        title="lihat di dashboard terpisah"><i class="mdi mdi-collage"></i>
+                        Pemantauan Alokasi
+                        Anggaran</a></h4>
+            </div>
+            <div class="row card-body">
+                <!-- widget Gerdal OPT -->
+
+
+                <div class="col-lg-4 col-md-6">
+                    <div class="card card-default">
+                        <div class="card-header">
+                            <span id="Widget1Title" class="font-weight-bolder">Total Anggaran</span>
+                        </div>
+                        <div class="card-body">
+                            <!-- Row -->
+                            <div class="row">
+                                <div class="col-4 align-self-center text-right  p-l-0">
+                                    <img class="img" id="" src="<?php echo base_url('/images/icon/money-bag.png') ?>"
+                                        style="width:48px;" alt="">
+                                </div>
+                                <div class="col-8" id="Widget3Total">
+                                    <h6 id="Widget1Text">Anggaran Tahun 2022</h6>
+                                    <h3 class="text-info font-bold">373.185.388.571</h3>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="card-body">
+                                    <div class="d-flex justify-content-between mt-2">
+                                        <small>
+                                            <p class="text-muted mb-0">0%</p>
+                                        </small>
+                                        <small>
+                                            <p class="text-muted mb-0">100%</p>
+                                        </small>
+                                    </div>
+                                    <div class="progress progress-sm">
+                                        <div class="progress-bar bg-info" role="progressbar"
+                                            style="width: 100%; height: 10px;" aria-valuenow="100" aria-valuemin="0"
+                                            aria-valuemax="100">
+                                        </div>
+                                    </div>
+                                    <small><i class="text-muted mb-0"></i>Total Anggaran Kegiatan Tahun ini</small>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="col-4 align-self-center text-right  p-l-0">
-                        <div id="sparklinedash3"></div>
+                </div>
+                <!-- widget Gerdal OPT -->
+
+                <div class="col-lg-4 col-md-6">
+                    <div class="card card-default">
+                        <div class="card-header">
+                            <span id="Widget1Title" class="font-weight-bolder">Total Bantuan Barang</span>
+                        </div>
+                        <div class="card-body">
+                            <!-- Row -->
+                            <div class="row">
+                                <div class="col-4 align-self-center text-right  p-l-0">
+                                    <img class="img" id="" src="<?php echo base_url('/images/icon/boxes.png') ?>"
+                                        style="width:48px;" alt="">
+                                </div>
+                                <div class="col-8" id="Widget3Total">
+                                    <h6 id="Widget1Text">Realisasi Penyaluran</h6>
+                                    <h3 class="text-success font-bold">298.548.310.857</h3>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="card-body">
+                                    <div class="d-flex justify-content-between mt-2">
+                                        <small>
+                                            <p class="text-muted mb-0">Data: 31 Jan</p>
+                                        </small>
+                                        <small>
+                                            <p class="text-muted mb-0">80%</p>
+                                        </small>
+                                    </div>
+                                    <div class="progress progress-sm">
+                                        <div class="progress-bar bg-success" role="progressbar"
+                                            style="width: 80%; height: 10px;" aria-valuenow="80" aria-valuemin="0"
+                                            aria-valuemax="100">
+                                        </div>
+                                    </div>
+                                    <small><i class="text-muted mb-0"></i>Dari total alokasi anggaran</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- widget Gerdal OPT -->
+
+                <div class="col-lg-4 col-md-6">
+                    <div class="card card-default">
+                        <div class="card-header">
+                            <span id="Widget1Title" class="font-weight-bolder">Total Bantuan Uang</span>
+                        </div>
+                        <div class="card-body">
+                            <!-- Row -->
+                            <div class="row">
+                                <div class="col-4 align-self-center text-right  p-l-0">
+                                    <img class="img" id="" src="<?php echo base_url('/images/icon/money.png') ?>"
+                                        style="width:48px;" alt="">
+                                </div>
+                                <div class="col-8" id="Widget3Total">
+                                    <h6 id="Widget1Text">Realisasi Penyaluran</h6>
+                                    <h3 class="text-warning font-bold">149.274.155.428</h3>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="card-body">
+                                    <div class="d-flex justify-content-between mt-2">
+                                        <small>
+                                            <p class="text-muted mb-0">Data: 30 Jun</p>
+                                        </small>
+                                        <small>
+                                            <p class="text-muted mb-0">50%</p>
+                                        </small>
+                                    </div>
+                                    <div class="progress progress-sm">
+                                        <div class="progress-bar bg-warning" role="progressbar"
+                                            style="width: 50%; height: 10px;" aria-valuenow="50" aria-valuemin="0"
+                                            aria-valuemax="100">
+                                        </div>
+                                    </div>
+                                    <small><i class="text-muted mb-0"></i>Dari total alokasi anggaran</small>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </div>
-    <!-- Column -->
-    <div class="col-lg-6 col-md-6">
-        <div class="card">
-            <div class="card-body">
-                <!-- Row -->
-                <div class="row">
-                    <div class="col-8">
-                        <h2 class="">Rp. 23.814.542.600 <i class="ti-angle-up font-14 text-success"></i></h2>
-                        <h6>Volume Kontrak Bantuan Uang</h6>
-                    </div>
-                    <div class="col-4 align-self-center text-right p-l-0">
-                        <div id="sparklinedash"></div>
-                    </div>
-                </div>
+            <div class="card-footer">
+                <h6 class="card-title m-b-0" style="text-align: right;"><small>Sumber: App. Pengendalian Anggaran
+                        2022</small></h6>
             </div>
         </div>
     </div>
 </div>
+<!-- App Anggaran -->
+
+<!-- jenis barang -->
+<div class="row">
+    <div class="col-lg-12 col-md-12">
+        <div class="card">
+            <div class="card-header bg-1b">
+                <div class="card-actions">
+                    <a class=" text-white" data-action="collapse" data-toggle="tooltip" title="sembunyikan"><i
+                            class="ti-minus"></i></a>
+                    <a class="btn-minimize text-white" data-action="expand" data-toggle="tooltip" title="layar penuh"><i
+                            class="mdi mdi-arrow-expand"></i></a>
+                    <a class="btn-close text-white" data-action="close" data-toggle="tooltip" title="tutup"><i
+                            class="ti-close"></i></a>
+                </div>
+                <h4 class="card-title m-b-0 text-white"><a class="btn-minimize text-white" data-toggle="tooltip"
+                        title="lihat di dashboard terpisah"><i class="mdi mdi-collage"></i>
+                        Bantuan Berdasarkan Jenis Barang</a></h4>
+            </div>
+            <div class="row card-body">
+
+                <div class="col-lg-3 col-md-6">
+                    <div class="card card-default ">
+                        <div class="card-header">
+                            <span id="Widget1Title" class="font-weight-bolder">Alsintan</span>
+                        </div>
+                        <div class="card-body">
+                            <!-- Row -->
+                            <div class="row">
+
+
+                                <div class="col-4 align-self-center text-right  p-l-0">
+                                    <img class="img" id="" src="<?php echo base_url('/images/icon/fertilizer.png') ?>"
+                                        style="width:48px;" alt="">
+                                </div>
+                                <div class="col-8" id="Widget3Total">
+                                    <h6 id="Widget1Text">Nominal</h6>
+                                    <h6 class="text-info font-bold">373.185.388.571</h6>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="card-body">
+                                    <div class="d-flex justify-content-between mt-2">
+                                        <small>
+                                            <p class="text-muted mb-0">0%</p>
+                                        </small>
+                                        <small>
+                                            <p class="text-muted mb-0">70%</p>
+                                        </small>
+                                    </div>
+                                    <div class="progress progress-sm">
+                                        <div class="progress-bar bg-info" role="progressbar"
+                                            style="width: 100%; height: 10px;" aria-valuenow="70" aria-valuemin="0"
+                                            aria-valuemax="100">
+                                        </div>
+                                    </div>
+                                    <small><i class="text-muted mb-0"></i>Dari total alokasi anggaran</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- widget Gerdal OPT -->
+
+
+                <div class="col-lg-3 col-md-6">
+                    <div class="card card-default">
+                        <div class="card-header">
+                            <span id="Widget1Title" class="font-weight-bolder">Benih</span>
+                        </div>
+                        <div class="card-body">
+                            <!-- Row -->
+                            <div class="row">
+                                <div class="col-4 align-self-center text-right  p-l-0">
+                                    <img class="img" id="" src="<?php echo base_url('/images/icon/seeding.png') ?>"
+                                        style="width:48px;" alt="">
+                                </div>
+                                <div class="col-8" id="Widget3Total">
+                                    <h6 id="Widget1Text">Nominal</h6>
+                                    <h6 class="text-success font-bold">298.548.310.857</h6>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="card-body">
+                                    <div class="d-flex justify-content-between mt-2">
+                                        <small>
+                                            <p class="text-muted mb-0">0%</p>
+                                        </small>
+                                        <small>
+                                            <p class="text-muted mb-0">80%</p>
+                                        </small>
+                                    </div>
+                                    <div class="progress progress-sm">
+                                        <div class="progress-bar bg-success" role="progressbar"
+                                            style="width: 80%; height: 10px;" aria-valuenow="80" aria-valuemin="0"
+                                            aria-valuemax="100">
+                                        </div>
+                                    </div>
+                                    <small><i class="text-muted mb-0"></i>Dari total alokasi anggaran</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="col-lg-3 col-md-6">
+                    <div class="card card-default">
+                        <div class="card-header">
+                            <span id="Widget1Title" class="font-weight-bolder">Pupuk</span>
+                        </div>
+                        <div class="card-body">
+                            <!-- Row -->
+                            <div class="row">
+                                <div class="col-4 align-self-center text-right  p-l-0">
+                                    <img class="img" id="" src="<?php echo base_url('/images/icon/seed.png') ?>"
+                                        style="width:48px;" alt="">
+                                </div>
+                                <div class="col-8" id="Widget3Total">
+                                    <h6 id="Widget1Text">Nominal</h6>
+                                    <h6 class="text-warning font-bold">149.274.155.428</h6>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="card-body">
+                                    <div class="d-flex justify-content-between mt-2">
+                                        <small>
+                                            <p class="text-muted mb-0">0%</p>
+                                        </small>
+                                        <small>
+                                            <p class="text-muted mb-0">50%</p>
+                                        </small>
+                                    </div>
+                                    <div class="progress progress-sm">
+                                        <div class="progress-bar bg-warning" role="progressbar"
+                                            style="width: 50%; height: 10px;" aria-valuenow="50" aria-valuemin="0"
+                                            aria-valuemax="100">
+                                        </div>
+                                    </div>
+                                    <small><i class="text-muted mb-0"></i>Dari total alokasi anggaran</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6">
+                    <div class="card card-default">
+                        <div class="card-header">
+                            <span id="Widget1Title" class="font-weight-bolder">Sarpras</span>
+                        </div>
+                        <div class="card-body">
+                            <!-- Row -->
+                            <div class="row">
+                                <div class="col-4 align-self-center text-right  p-l-0">
+                                    <img class="img" id="" src="<?php echo base_url('/images/icon/sarpras.png') ?>"
+                                        style="width:48px;" alt="">
+                                </div>
+                                <div class="col-8" id="Widget3Total">
+                                    <h6 id="Widget1Text">Nominal</h6>
+                                    <h6 class="text-danger font-bold">149.274.155.428</h6>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="card-body">
+                                    <div class="d-flex justify-content-between mt-2">
+                                        <small>
+                                            <p class="text-muted mb-0">0%</p>
+                                        </small>
+                                        <small>
+                                            <p class="text-muted mb-0">90%</p>
+                                        </small>
+                                    </div>
+                                    <div class="progress progress-sm">
+                                        <div class="progress-bar bg-danger" role="progressbar"
+                                            style="width: 50%; height: 10px;" aria-valuenow="90" aria-valuemin="0"
+                                            aria-valuemax="100">
+                                        </div>
+                                    </div>
+                                    <small><i class="text-muted mb-0"></i>Dari total alokasi anggaran</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card-footer">
+                <h6 class="card-title m-b-0" style="text-align: right;"><small>Sumber: App. Pengendalian Anggaran
+                        2022</small></h6>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- jenis barang -->
+
 <div class="row row-card-no-pd">
     <div class="col-md-12">
         <div class="card">
-            <div class="card-header">
-                PETA SEBARAN BANTUAN
-                <div class="card-actions">
-                    <a class="" data-action="collapse"><i class="ti-minus"></i></a>
-                    <a class="btn-minimize" data-action="expand"><i class="mdi mdi-arrow-expand"></i></a>
-                    <!--//<a class="btn-close" data-action="close"><i class="ti-close"></i></a>//-->
+            <div class="card-header">Sebaran Bantuan Barang berdasarkan Satker
+                <div class="card-actions"><a class="" data-action="collapse"><i class="ti-minus"></i></a><a
+                        class="btn-minimize" data-action="expand"><i class="mdi mdi-arrow-expand"></i></a>
+                    <!-- //<a class="btn-close" data-action="close"><i class="ti-close"></i></a>//-->
+
                 </div>
             </div>
             <div class="card-body">
@@ -58,15 +371,16 @@
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <?php foreach($get_wilayah as $wilayah){
-														 ?>
+                                    <?php foreach($get_wilayah as $wilayah) {?>
                                     <tr>
                                         <td style="width:30px"><a
-                                                href="<?php echo base_url('sibanpem/View_detail_prov/').$wilayah['id'] ?>"><img
+                                                href="<?php echo base_url('dashboard/View_detail_prov/').$wilayah['id'] ?>"><img
                                                     src="<?php echo base_url('assets/images/logo/').$wilayah['id'].'.png' ?>"
-                                                    alt="logo" /></a>
+                                                    alt="logo" /></a></td>
+                                        <td><a
+                                                href="<?php echo base_url('dashboard/View_detail_prov/').$wilayah['id'] ?>">
+                                                <?php echo $wilayah['nama'];?> </a>
                                         </td>
-                                        <td><?php echo $wilayah['nama']; ?></td>
                                     </tr>
                                     <?php } ?>
                                 </tbody>
@@ -76,12 +390,10 @@
                     <div class="col-md-9">
                         <div id="visitfromworld" style="width:100%!important; height:410px; z-index:1">
                             <div class="leaflet-bottom leaflet-left">
-                                <div class="panel-body-lg">
-                                    <a href="< ?php echo base_url() ?>" class="logo d-flex align-items-center">
-                                        <img src="< ?php echo base_url('assets/images/') ?>logo-light-text.png"
-                                            alt="navbar brand" class="navbar-brand" height="45px">
-                                    </a>
-                                </div>
+                                <div class="panel-body-lg"><a href="< ?php echo base_url() ?>"
+                                        class="logo d-flex align-items-center"><img
+                                            src="< ?php echo base_url('assets/images/') ?>logo-light-text.png"
+                                            alt="navbar brand" class="navbar-brand" height="45px"></a></div>
                             </div>
                         </div>
                     </div>
@@ -90,294 +402,3 @@
         </div>
     </div>
 </div>
-<!-- Row -->
-<div class="row">
-    <div class="col-lg-8 col-xlg-9">
-        <div class="card">
-            <div class="card-body">
-                <h5 class="card-title">REKAPITULASI BANTUAN BERDASAR KEGIATAN & AKUN BELANJA</h5>
-                <h6 class="card-subtitle">Tahun 2021</h6>
-                <br>
-                <div class="row">
-                    <div class="col-lg-12 col-xlg-12">
-                        <div class="card">
-                            <div class="card-header">
-                                Bantuan Per Kegiatan
-                            </div>
-                            <div class="card-body">
-                                <div class="col-lg-12 col-xlg-12">
-                                    <canvas id="totalIncomeChart" style="height: 325px;"></canvas>
-                                </div>
-                            </div>
-                            <div class="card-body">
-                                <div class="col-lg-12 col-xlg-12">
-                                    <ul>
-                                        <li><small class="text-muted">1771 Peningkatan Sayuran dan Tanaman Obat</small>
-                                        </li>
-                                        <li><small class="text-muted">1773 Perlindungan Hortikultura</small></li>
-                                        <li><small class="text-muted">1774 Peningkatan Usaha Dukungan Manajemen dan
-                                                Teknis Lainnya pada Ditjen Hortikultura</small></li>
-                                        <li><small class="text-muted">4581 Perbenihan Hortikultura</small></li>
-                                        <li><small class="text-muted">5886 Peningkatan Produksi Buah dan
-                                                Florikultura</small></li>
-                                        <li><small class="text-muted">5887 Pengolahan dan Pemasaran Hasil
-                                                Hortikultura</small></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-12 col-xlg-12">
-                        <div class="card">
-                            <div class="card-header">
-                                Bantuan Per Kegiatan
-                            </div>
-                            <div class="card-body">
-                                <div class="col-lg-12 col-xlg-12">
-                                    <canvas id="totalAKunChart" style="height: 325px;"></canvas>
-                                </div>
-                                <div class="col-lg-12 col-xlg-12">
-                                    <ul>
-                                        <li><small class="text-muted">526112 Beban Peralatan dan Mesin untuk diserahkan
-                                                kepada Masyarakat dan Pemda</small></li>
-                                        <li><small class="text-muted">526113 Beban Gedung dan Bangunan untuk diserahkan
-                                                kepada Masyarakat dan Pemda</small></li>
-                                        <li><small class="text-muted">526115 Beban Fisik lainnya untuk diserahkan kepada
-                                                Masyarakat dan Pemda</small></li>
-                                        <li><small class="text-muted">526311 Beban Barang Bantuan lainnya untuk
-                                                diserahkan kepada Masyarakat dan Pemda</small></li>
-                                        <li><small class="text-muted">526321 Belanja barang untuk bantuan lainnya untuk
-                                                diserahkan kepada masyarakat danPemda dalam bentuk Uang</small></li>
-                                        <li><small class="text-muted">526322 Belanja barang untuk bantuan lainnya khusus
-                                                bantuan Covid</small></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                </br>
-            </div>
-        </div>
-    </div>
-    <div class="col-lg-4 col-xlg-3">
-        <div class="card">
-            <div class="card-header">
-                <h4 class="align-items-center">Top 10 Provinsi Penerima Bantuan</h4>
-            </div>
-            <div class="card-body">
-                <ul class="nav nav-pills nav-secondary align-items-center" id="pills-tab" role="tablist">
-                    <li class="nav-item">
-                        <a class="nav-link active" id="pills-home-tab" data-toggle="pill" href="#pills-home" role="tab"
-                            aria-controls="pills-home" aria-selected="true"><i class="flaticon-download-1"></i>
-                            Terbesar</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" id="pills-profile-tab" data-toggle="pill" href="#pills-profile" role="tab"
-                            aria-controls="pills-profile" aria-selected="false"><i class="flaticon-up-arrow-3"></i></i>
-                            Terkecil</a>
-                    </li>
-                </ul>
-                <div class="tab-content mt-2 mb-2" id="pills-tabContent">
-                    <div class="tab-pane fade show active" id="pills-home" role="tabpanel"
-                        aria-labelledby="pills-home-tab">
-                        <?php foreach($get_provinsi_terbesar as $prov){?>
-                        <div class="card p-0">
-                            <div class="d-flex align-items-center">
-                                <a href="javascript:void(0)" id="tampilProvinsi" title="Detail Bantuan"
-                                    onclick="tampilProvinsi(<?php echo $prov->id_provinsi ?>,'<?php echo $prov->provinsi ?>')">
-                                    <span class="stamp stamp-md bg-success mr-3">
-                                        <img src="<?php echo base_url('assets/images/logo/').$prov->id_provinsi.'.png' ?>"
-                                            alt="logo" />
-                                    </span>
-                                </a>
-                                <div>
-                                    <h5 class="mb-1"><b>Rp.
-                                            <?php echo number_format($prov->jumlah, 0, ",", "."); ?></b>
-                                    </h5>
-                                    <small class="text-muted"><?php echo $prov->provinsi; ?></small>
-                                </div>
-                            </div>
-                        </div>
-                        <?php }?>
-                    </div>
-                    <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
-                        <?php foreach($get_provinsi_terkecil as $prov){?>
-                        <div class="card p-0">
-                            <div class="d-flex align-items-center">
-                                <a href="javascript:void(0)" id="tampilProvinsi" title="Detail Bantuan"
-                                    onclick="tampilProvinsi(<?php echo $prov->id_provinsi ?>,'<?php echo $prov->provinsi ?>')">
-                                    <span class="stamp stamp-md bg-danger mr-3">
-                                        <img src="<?php echo base_url('assets/images/logo/').$prov->id_provinsi.'.png' ?>"
-                                            alt="logo" />
-                                    </span>
-                                </a>
-                                <div>
-                                    <h5 class="mb-1"><b>Rp.
-                                            <?php echo number_format($prov->jumlah, 0, ",", "."); ?></b>
-                                    </h5>
-                                    <small class="text-muted"><?php echo $prov->provinsi; ?></small>
-                                </div>
-                            </div>
-                        </div>
-                        <?php }?>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<div class="row">
-    <div class="col-lg-12">
-        <div class="card">
-            <div class="card-body">
-                <h5 class="card-title">KINERJA PENYALURAN BANTUAN</h5>
-                <h6 class="card-subtitle">Tahun Anggaran 2021</h6>
-                <br>
-                <div class="row">
-                    <div class="col-lg-6 col-xlg-6">
-                        <div class="card">
-                            <div class="card-header">
-                                Penyaluran Bantuan Barang
-                            </div>
-                            <div class="card-body">
-                                <div class="progress progress-sm">
-                                    <div class="progress-bar bg-info w-100" role="progressbar"
-                                        style="width: 100%; height: 10px;" aria-valuenow="100" aria-valuemin="0"
-                                        aria-valuemax="100"></div>
-                                </div>
-                                <div class="d-flex justify-content-between mt-2">
-                                    <p class="text-muted mb-0">Volume Nilai Kontrak</p>
-                                    <p class="text-muted mb-0">Rp. 274.873.768.257</p>
-                                </div>
-                                <div class="progress progress-sm">
-                                    <div class="progress-bar bg-success" role="progressbar"
-                                        style="width: 96%; height: 10px;" aria-valuenow="96" aria-valuemin="0"
-                                        aria-valuemax="100"></div>
-                                </div>
-                                <div class="d-flex justify-content-between mt-2">
-                                    <p class="text-muted mb-0">Nilai SPM/SP2D</p>
-                                    <p class="text-muted mb-0">Rp. 263.773.980.415</p>
-                                </div>
-                                <div class="progress progress-sm">
-                                    <div class="progress-bar bg-success" role="progressbar"
-                                        style="width: 92%; height: 10px;" aria-valuenow="92" aria-valuemin="0"
-                                        aria-valuemax="100"></div>
-                                </div>
-                                <div class="d-flex justify-content-between mt-2">
-                                    <p class="text-muted mb-0">Nilai Disalurkan</p>
-                                    <p class="text-muted mb-0">Rp. 253.413.963.736</p>
-                                </div>
-                                <div class="progress progress-sm">
-                                    <div class="progress-bar bg-success" role="progressbar"
-                                        style="width: 83%; height: 10px;" aria-valuenow="83" aria-valuemin="0"
-                                        aria-valuemax="100"></div>
-                                </div>
-                                <div class="d-flex justify-content-between mt-2">
-                                    <p class="text-muted mb-0">Nilai Dikonfirmasi Penerima</p>
-                                    <p class="text-muted mb-0">Rp. 226.836.182.335</p>
-                                </div>
-                                <div class="progress progress-sm">
-                                    <div class="progress-bar bg-success" role="progressbar"
-                                        style="width: 87%; height: 10px;" aria-valuenow="87" aria-valuemin="0"
-                                        aria-valuemax="100"></div>
-                                </div>
-                                <div class="d-flex justify-content-between mt-2">
-                                    <p class="text-muted mb-0">Nilai BAST</p>
-                                    <p class="text-muted mb-0">Rp. 239.132.893.075</p>
-                                </div>
-                                <div class="progress progress-sm">
-                                    <div class="progress-bar bg-success" role="progressbar"
-                                        style="width: 32%; height: 10px; background-color:#dc3545!important"
-                                        aria-valuenow="32" aria-valuemin="0" aria-valuemax="100"></div>
-                                </div>
-                                <div class="d-flex justify-content-between mt-2">
-                                    <p class="text-muted mb-0">Nilai Telah direview</p>
-                                    <p class="text-muted mb-0">Rp. 86.867.878.758</p>
-                                </div>
-
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-6 col-xlg-6">
-                        <div class="card">
-                            <div class="card-header">
-                                Penyaluran Uang
-                            </div>
-                            <div class="card-body">
-                                <div class="progress progress-sm">
-                                    <div class="progress-bar bg-success w-100" role="progressbar"
-                                        style="width: 60%; height: 10px; background-color:#1976d2!important;"
-                                        aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
-                                </div>
-                                <div class="d-flex justify-content-between mt-2">
-                                    <p class="text-muted mb-0">Nilai SK</p>
-                                    <p class="text-muted mb-0">Rp. 23.674.542.600</p>
-                                </div>
-                                <div class="progress progress-sm">
-                                    <div class="progress-bar bg-success" role="progressbar"
-                                        style="width: 57%; height: 10px;background-color:#FFC000!important;"
-                                        aria-valuenow="57" aria-valuemin="0" aria-valuemax="100"></div>
-                                </div>
-                                <div class="d-flex justify-content-between mt-2">
-                                    <p class="text-muted mb-0">SPM Yang Telah Di Input</p>
-                                    <p class="text-muted mb-0">Rp. 13.545.895.280</p>
-                                </div>
-                                <div class="progress progress-sm">
-                                    <div class="progress-bar bg-success" role="progressbar"
-                                        style="width: 56%; height: 10px; background-color:#FFC000!important;"
-                                        aria-valuenow="56" aria-valuemin="0" aria-valuemax="100"></div>
-                                </div>
-                                <div class="d-flex justify-content-between mt-2">
-                                    <p class="text-muted mb-0">Nilai Disalurkan</p>
-                                    <p class="text-muted mb-0">Rp. 13.265.895.280</p>
-                                </div>
-                                <div class="progress progress-sm">
-                                    <div class="progress-bar bg-success" role="progressbar"
-                                        style="width: 51%; height: 10px; background-color:#e83e8c!important;"
-                                        aria-valuenow="51" aria-valuemin="0" aria-valuemax="100"></div>
-                                </div>
-                                <div class="d-flex justify-content-between mt-2">
-                                    <p class="text-muted mb-0">Nilai Dikonfirmasi Penerima</p>
-                                    <p class="text-muted mb-0">Rp. 12.189.455.280</p>
-                                </div>
-                                <div class="progress progress-sm">
-                                    <div class="progress-bar bg-success" role="progressbar"
-                                        style="width: 23%; height: 10px; background-color:#F52B30!important;"
-                                        aria-valuenow="23" aria-valuemin="0" aria-valuemax="100"></div>
-                                </div>
-                                <div class="d-flex justify-content-between mt-2">
-                                    <p class="text-muted mb-0">Nilai BAST</p>
-                                    <p class="text-muted mb-0">Rp. 5.356.230.000</p>
-                                </div>
-                                <div class="progress progress-sm">
-                                    <div class="progress-bar bg-success" role="progressbar"
-                                        style="width: 20%; height: 10px; background-color:#dc3545!important;"
-                                        aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"></div>
-                                </div>
-                                <div class="d-flex justify-content-between mt-2">
-                                    <p class="text-muted mb-0">Nilai Telah direview</p>
-                                    <p class="text-muted mb-0">Rp. 360.000.000</p>
-                                </div>
-
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <h6 class="card-subtitle"> <small>(Data per Oktober 2021)</small></h6>
-                </br>
-            </div>
-        </div>
-    </div>
-
-</div>
-<!-- Row -->
-<!-- ============================================================== -->
-<!-- End PAge Content -->
-<!-- ============================================================== -->
-<!-- ============================================================== -->
-<!-- Right sidebar -->
-<!-- ============================================================== -->
-<!-- .right-sidebar -->
-
-<!-- /.row -->

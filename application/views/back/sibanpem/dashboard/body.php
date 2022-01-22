@@ -16,32 +16,7 @@
 <?php $this->load->view('back/template/header'); ?>
 <?php $this->load->view('back/template/sidebar'); ?>
 <div class="page-wrapper">
-    <!-- ============================================================== -->
-    <!-- Bread crumb and right sidebar toggle -->
-    <!-- ============================================================== -->
-    <?php
-			//	$geojson = array('type' => 'FeatureCollection', 'features' => array());
-				
-			//	foreach($get_wilayah as $mypoly)
-			//	{
-			//		$properties = $mypoly;
-			//		unset($properties['lat']);
-			//		unset($properties['lng']);
-			//		$feature = array(
-			//			'type'	=> 'Feature',
-			//			'geometry' => array(
-			//				'type' => 'Point',
-			//				'coordinates' => 
-			//						$mypoly['lat'],
-			//						$mypoly['lng']
-									
-			//				),
-			//			'properties' => $properties
-			//		);
-			//		array_push($geojson['features'], $feature);
-			//	}
-			//var myJson = <?= json_encode($geojson,JSON_NUMERIC_CHECK); 
-			?>
+
     <div class="row page-titles">
         <div class="col-md-5 align-self-center">
             <h3 class="text-themecolor">SIBANPEM</h3>
@@ -61,11 +36,11 @@
         </div>
         <div class="col-md-3">
             <!-- right column -->
-            <ol class="breadcrumb">
+            <!--ol class="breadcrumb">
                 <h6>
                     <li><small class="text-muted">(Data per Oktober 2021)</small></li>
                 </h6>
-            </ol>
+            </ol-->
         </div>
     </div>
     <div </div>
@@ -208,7 +183,7 @@
             function View_modal(e) {
                 var name = e.feature.properties.NAME_1;
                 var code = e.feature.properties.KODE;
-                window.location = "<?php echo base_url('sibanpem/View_detail_prov/')?>" + code;
+                window.location = "<?php echo base_url('dashboard/View_detail_prov/')?>" + code;
             }
             // end maping
 

@@ -11,7 +11,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     {
       $CI->session->set_flashdata('message', '<div class="alert alert-danger">You must login first</div>');
 
-      redirect('auth/login');
+      redirect('front');
     }
   }
 

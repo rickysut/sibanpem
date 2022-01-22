@@ -25,7 +25,7 @@ class Front extends CI_Controller {
 		{
 		  
 		  $row = $this->Auth_model->get_by_username($this->input->post('username'));
-
+		  
 		  if(!$row->username)
 		  {
 			$this->session->set_flashdata('message', '<div class="alert alert-danger">Username not found</div>');
@@ -77,7 +77,7 @@ class Front extends CI_Controller {
 
 			$this->Auth_model->update($this->session->id_users, array('last_login'=>date('Y-m-d H:i:s')));
 
-			redirect('sibanpem');
+			redirect('dashboard');
 		  }
 		}
 		else
